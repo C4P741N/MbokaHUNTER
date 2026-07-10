@@ -1,0 +1,17 @@
+services:
+  job-tracker-debug:
+    image: job-tracker-debug
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: job-tracker-debug
+    ports:
+      - "5678:5678"
+    environment:
+      TELEGRAM_BOT_TOKEN: "your_bot_token"
+      TELEGRAM_CHAT_ID: "your_chat_id"
+    stdin_open: true
+    tty: true
+    restart: "unless-stopped"
+    volumes:
+    - ~/.cache/huggingface:/root/.cache/huggingface
