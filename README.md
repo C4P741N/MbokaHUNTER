@@ -1,4 +1,4 @@
-# Mboka-Ai, the automated job tracker
+# MbokaHUNTER
 
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
 [![Docker](https://img.shields.io/badge/docker-integrated-2496ED?logo=docker)](https://www.docker.com/)
