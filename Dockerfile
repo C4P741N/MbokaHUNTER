@@ -13,4 +13,4 @@ COPY main.py .
 
 EXPOSE 5678
 
-CMD ["python", "-m", "debugpy", "--listen", "0.0.0.0:5678", "--wait-for-client", "job_tracker.py"]
+CMD ["python", "-m", "debugpy", "--listen", "0.0.0.0:5678", "--wait-for-client", "main.py"]

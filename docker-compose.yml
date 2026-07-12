@@ -10,6 +10,7 @@ services:
     environment:
       TELEGRAM_BOT_TOKEN: "your_bot_token"
       TELEGRAM_CHAT_ID: "your_chat_id"
+      SERPAPI_API_KEY: "b497c9cb4a0666f06428b6823841473eec0ea58c7f9378670785f2cec5236a24"
     stdin_open: true
     tty: true
     restart: "unless-stopped"
