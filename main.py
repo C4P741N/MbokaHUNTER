@@ -7,8 +7,6 @@ from services.repo.repository import already_seen, init_db, save_job
 from services.search_engine.search_engine import fetch_jobs
 from services.string_handlers.string_handler import THRESHOLD, TOP_K, job_id_from, keyword_filter
 
-import time
-
 load_dotenv() 
 
 def run():
@@ -31,8 +29,8 @@ def run():
 
         for job, score in top_jobs:
             jid = job_id_from(job)
-            # if already_seen(jid):
-            #     continue
+            if already_seen(jid):
+                continue
             if score >= THRESHOLD:
                 # message = format_alert(job, score)
                 # send_telegram_message(message)
