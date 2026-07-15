@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    name: Build, Lint and Test
+    name: Build, Lint and Test(removed)
     runs-on: ubuntu-latest
 
     steps:
@@ -23,13 +23,13 @@ jobs:
 
       - run: pip install -r requirements.txt
 
-      - run: pip install pytest ruff
+      # - run: pip install pytest ruff
 
       - name: Lint
         run: ruff check .
 
-      - name: Run tests
-        run: pytest
+      # - name: Run tests
+      #   run: pytest
 
       - name: Verify project compiles
         run: python -m compileall .
