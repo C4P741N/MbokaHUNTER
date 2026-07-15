@@ -99,20 +99,3 @@ def _fetch_jobs_from_serpapi():
 def fetch_jobs():
     """Main entry point – returns a list of job dicts."""
     return _fetch_jobs_from_serpapi()
-
-def fetch_jobs() -> float:
-
-    params = {
-        "api_key": SERPAPI_API_KEY
-    }
-
-    try:
-        resp = requests.get("https://serpapi.com/account?api_key=", params=params)
-        resp.raise_for_status()
-        data = resp.json()
-    except Exception as e:
-        print(f"SerpAPI request failed: {e}")
-        return 0
-    
-    plan_renewal_date = data.get("plan_renewal_date", "")
-    plan_searches_left = data.get("plan_searches_left", "")
